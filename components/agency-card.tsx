@@ -16,8 +16,8 @@ interface AgencyCardProps {
 export function AgencyCard({ agency, index = 0 }: AgencyCardProps) {
   const formatBudget = (min: number, max: number) => {
     const format = (n: number) => {
-      if (n >= 1000) return `$${(n / 1000).toFixed(0)}k`;
-      return `$${n}`;
+      if (n >= 1000) return `$₹{(n / 1000).toFixed(0)}k`;
+      return `$₹{n}`;
     };
     return `${format(min)} - ${format(max)}`;
   };
