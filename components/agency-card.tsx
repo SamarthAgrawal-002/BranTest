@@ -16,17 +16,21 @@ interface AgencyCardProps {
 export function AgencyCard({ agency, index = 0 }: AgencyCardProps) {
   const formatBudget = (min: number, max: number) => {
     const format = (n: number) => {
-      if (n >= 1000) return `$₹{(n / 1000).toFixed(0)}k`;
-      return `$₹{n}`;
+      if (n >= 1000) return `₹${(n / 1000).toFixed(0)}k`;
+      return `₹${n.toLocaleString("en-IN")}`;
     };
     return `${format(min)} - ${format(max)}`;
   };
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{
+        duration: 0.4,
+        delay: index * 0.05,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
     >
       <GlassCard hover className="p-6">
         <div className="flex flex-col gap-4">
