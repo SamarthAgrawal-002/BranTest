@@ -211,8 +211,8 @@ export default function ExplorePage() {
                     className="mb-2"
                   />
                   <div className="flex justify-between text-xs text-muted-foreground">
-                    <span>${(budgetRange[0] / 1000).toFixed(0)}k</span>
-                    <span>${(budgetRange[1] / 1000).toFixed(0)}k+</span>
+                    <span>₹{(budgetRange[0] / 1000).toFixed(0)}k</span>
+                    <span>₹{(budgetRange[1] / 1000).toFixed(0)}k+</span>
                   </div>
                 </div>
 
