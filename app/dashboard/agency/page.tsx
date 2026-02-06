@@ -339,7 +339,7 @@ export default function AgencyDashboardPage() {
               {/* Budget Range */}
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="budgetMin">Minimum Budget ($) *</Label>
+                  <Label htmlFor="budgetMin">Minimum Budget (₹) *</Label>
                   <Input
                     id="budgetMin"
                     type="number"
@@ -349,7 +349,7 @@ export default function AgencyDashboardPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="budgetMax">Maximum Budget ($) *</Label>
+                  <Label htmlFor="budgetMax">Maximum Budget (₹) *</Label>
                   <Input
                     id="budgetMax"
                     type="number"
